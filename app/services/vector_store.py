@@ -1,14 +1,14 @@
 from app.config import CHROMA_PERSIST_DIR, COLLECTION_NAME
 from langchain_chroma import Chroma
-from langchain_openai import OpenAIEmbeddings
-from langchain_ollama import OllamaEmbeddings
-from app.config import LLM_PROVIDER, OPENAI_API_KEY
+from langchain_community.embeddings import DashScopeEmbeddings
+from app.config import DASHSCOPE_API_KEY, EMBEDDING_MODEL
 
 
 def get_embeddings():
-    if LLM_PROVIDER == "ollama":
-        return OllamaEmbeddings(model="nomic-embed-text")
-    return OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
+    return DashScopeEmbeddings(
+        model=EMBEDDING_MODEL,
+        dashscope_api_key=DASHSCOPE_API_KEY,
+    )
 
 
 def get_vector_store():

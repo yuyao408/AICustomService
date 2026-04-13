@@ -4,13 +4,12 @@ import os
 load_dotenv()
 
 # LLM 配置
-LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "dashscope")
+DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY", "")
+DASHSCOPE_MODEL = os.getenv("DASHSCOPE_MODEL", "qwen-turbo")
 
-# Ollama 配置
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:7b")
+# 嵌入模型配置
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-v4")
 
 # 向量数据库配置
 CHROMA_PERSIST_DIR = os.getenv("CHROMA_PERSIST_DIR", "./data/chroma_db")
