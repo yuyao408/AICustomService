@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+langchain
+langchain-openai
+langchain-chroma
+langchain-community
+langchain-ollama
+chromadb
+python-dotenv
+pypdf
+docx2txt
+unstructured[md]
+streamlit
+requests
+pydantic
