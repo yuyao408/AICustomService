@@ -12,3 +12,4 @@ unstructured[md]
 streamlit
 requests
 pydantic
+python-multipart

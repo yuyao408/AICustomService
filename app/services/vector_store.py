@@ -16,12 +16,11 @@ def get_vector_store():
         collection_name=COLLECTION_NAME,
         embedding_function=get_embeddings(),
         persist_directory=CHROMA_PERSIST_DIR,
-    )
+    )   
 
 
 def add_documents(vector_store, documents):
     vector_store.add_documents(documents)
-    vector_store.persist()
 
 
 def search_documents(vector_store, query, k=3):

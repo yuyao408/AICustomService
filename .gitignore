@@ -5,3 +5,4 @@ data/chroma_db/
 data/uploads/
 *.egg-info/
 .venv/
+node_modules/

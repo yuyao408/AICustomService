@@ -19,7 +19,7 @@ with st.sidebar:
                 st.success(f"上传成功! 分为 {data['chunks']} 个文本块")
             else:
                 st.error(f"上传失败: {resp.text}")
-
+    
 # 主区域：问答
 st.header("开始提问")
 if "messages" not in st.session_state:
